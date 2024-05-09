@@ -43,7 +43,7 @@ Check for correlations between relevant variables (Numerical vs Numerical).
 1.  import a CSV file named 'covid-data.csv' using pd.read_csv() into a DataFrame named Cvd_data.
 
 2.  Data assessment: are crucial for understanding the quality and characteristics of my dataset.
-   #Here are steps used to approach it using Python and pandas:
+   *Here are steps used to approach it using Python and pandas:
   *  Null Values: Cvd_data.isnull().sum()
   *  Duplicates: Cvd_data.duplicated().sum()
   *  Incorrect Datatypes: Cvd_data.dtypes

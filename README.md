@@ -115,7 +115,7 @@ print(Cvd_data.head(11))
 *    Feature Engineering: Cvd_data['total_cases_reported'] = Cvd_data['total_cases'] + Cvd_data['new_cases']
                           Cvd_data['total_deaths_reported'] = Cvd_data['total_deaths'] + Cvd_data['new_deaths']
                           Cvd_data
-     ![](featureengeneering.jpg)
+     ![](featureengineering.jpg)
 *These lines of code are performing calculations to create two new columns 'total_cases_reported and 'total_deaths_reported' by adding the 'total_cases' with 'new_cases', and 'total_deaths' with 'new_deaths' in the DataFrame*
 
 *    Numerical Correlation: Distr = Cvd_data.select_dtypes(['int', 'float']).iloc[:, [0, 1, 3, 4, 9, 22, 23, 30, 31]].corr()

@@ -26,7 +26,7 @@ Check for correlations between relevant variables (Numerical vs Numerical).
 
 
 ## Data Source
-
+   CSV file
 
 
 ## Tools and Techniques:
@@ -72,7 +72,39 @@ Check for correlations between relevant variables (Numerical vs Numerical).
                                        Cvd_data['date']
       
       *This code converts the 'date' column to datetime format function.*
-  *
+  *   Handling Ouliers:
+    
+median_values = Cvd_data[['new_cases',  'aged_65_older', 'aged_70_older', 'reproduction_rate']].median()
+Q1 = Cvd_data[['new_cases',  'aged_65_older', 'aged_70_older', 'reproduction_rate']].quantile(0.25)
+Q3 = Cvd_data[['new_cases',  'aged_65_older', 'aged_70_older', 'reproduction_rate']].quantile(0.75)
+IQR = Q3 - Q1
+lower_bounds = Q1 - 1.5 * IQR
+upper_bounds = Q3 + 1.5 * IQR
+def replace_outliers_with_median(col):
+    lower_bound = Q1.loc[col.name] - 1.5 * IQR.loc[col.name]
+    upper_bound = Q3.loc[col.name] + 1.5 * IQR.loc[col.name]
+    return col.mask((col < lower_bound) | (col > upper_bound), median_values.loc[col.name])
+Cvd_data[['new_cases',  'aged_65_older', 'aged_70_older', 'reproduction_rate']] = Cvd_data[['new_cases',  'aged_65_older', 'aged_70_older', 'reproduction_rate']].apply(replace_outliers_with_median)
+print(Cvd_data.head(11))
+
+*This codes calculates the median, interquartile range (IQR), and lower and upper bounds for outliers for the columns "'new_cases', 'aged_65_older', 'aged_70_older', and 'reproduction_rate'". And then defines a function to replace outliers with the median value for each column and applies this function to replace outliers in the specified columns. Finally, it displays the first 11 rows of the data after replacing outliers.*
+
+mean_values = Cvd_data[['total_cases', 'total_deaths', 'new_deaths',]].mean()
+Q1 = Cvd_data[['total_cases', 'total_deaths', 'new_deaths',]].quantile(0.25)
+Q3 = Cvd_data[['total_cases', 'total_deaths', 'new_deaths',]].quantile(0.75)
+IQR = Q3 - Q1
+lower_bounds = Q1 - 1.5 * IQR
+upper_bounds = Q3 + 1.5 * IQR
+def replace_outliers_with_mean(col):
+    lower_bound = lower_bounds[col.name]
+    upper_bound = upper_bounds[col.name]
+    return col.mask((col < lower_bound) | (col > upper_bound), mean_values[col.name])
+Cvd_data[['total_cases', 'total_deaths', 'new_deaths',]] = Cvd_data[['total_cases', 'total_deaths', 'new_deaths',]].apply(replace_outliers_with_mean, axis=0)
+print(Cvd_data.head(11))
+
+*This calculates the mean, interquartile range (IQR), and lower and upper bounds for outliers for the columns "''total_cases', 'total_deaths', 'new_deaths'". And then defines a function to replace outliers with the mean value for each column and applies this function to replace outliers in the specified columns. Finally, it displays the first 11 rows of the data after replacing outliers.*
+
+## Exploratory Data Analysis
 
       
      

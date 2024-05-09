@@ -43,7 +43,7 @@ Check for correlations between relevant variables (Numerical vs Numerical).
 1.  import a CSV file named 'covid-data.csv' using pd.read_csv() into a DataFrame named Cvd_data.
 
 2.  Data assessment: are crucial for understanding the quality and characteristics of my dataset.
-   *Here are steps used to approach it using Python and pandas:
+   Here are steps used to approach it using Python and pandas:
   *  Null Values: Cvd_data.isnull().sum()
   *  Duplicates: Cvd_data.duplicated().sum()
   *  Incorrect Datatypes: Cvd_data.dtypes
@@ -54,7 +54,7 @@ Check for correlations between relevant variables (Numerical vs Numerical).
 3.  Data cleaning methods:Preparing my data for anaalysis
   *  Handling Null Values: Cvd_data['continent'].fillna('unknown, inplace = True')
                            Cvd_data['continent'].isnull().sum()
-      #the first line of code is to fill missing values in the 'continent' column with the string 'unknown'. The second line is used to check if there are any remaining null values in the column after filling them with 'unknown'.
+      _the first line of code is to fill missing values in the 'continent' column with the string 'unknown'. The second line is used to check if there are any remaining null values in the column after filling them with 'unknown'.
   *  Handling Duplicates: There is no duplicate values in the dataset
   *  Handling Incorrect Datatype: Cvd_data['tests_units'].str.contains('\D').sum()
                                   Cvd_data[Cvd_data['tests_units'].str.contains('\D', na = False)]['tests_units']

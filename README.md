@@ -1,5 +1,12 @@
+![]()
 # Epidemic-Insights
 Epidemic Insights: Uncovering COVID-19 Trends
+
+
+----------------------------------------------------|---------------------------------------------------------
+              ![](covid2.jpg)                       |              ![](covid1.jpg)
+
+
 
 ## Introduction
 

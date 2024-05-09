@@ -112,10 +112,20 @@ print(Cvd_data.head(11))
 *This calculates the mean, interquartile range (IQR), and lower and upper bounds for outliers for the columns "''total_cases', 'total_deaths', 'new_deaths'". And then defines a function to replace outliers with the mean value for each column and applies this function to replace outliers in the specified columns. Finally, it displays the first 11 rows of the data after replacing outliers.*
 
 ## Exploratory Data Analysis
+*    Feature Engineering: Cvd_data['total_cases_reported'] = Cvd_data['total_cases'] + Cvd_data['new_cases']
+                          Cvd_data['total_deaths_reported'] = Cvd_data['total_deaths'] + Cvd_data['new_deaths']
+                          Cvd_data
+*These lines of code are performing calculations to create two new columns 'total_cases_reported and 'total_deaths_reported' by adding the 'total_cases' with 'new_cases', and 'total_deaths' with 'new_deaths' in the DataFrame*
+
+*    Numerical Correlation: Distr = Cvd_data.select_dtypes(['int', 'float']).iloc[:, [0, 1, 3, 4, 9, 22, 23, 30, 31]].corr()
+                                    Distr
+*This code calculates the correlation matrix for type 'int' or 'float'.*
+
+![](covid2.jpg)
 
       
      
-  
+ 
 
 
 

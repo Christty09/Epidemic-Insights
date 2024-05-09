@@ -115,15 +115,122 @@ print(Cvd_data.head(11))
 *    Feature Engineering: Cvd_data['total_cases_reported'] = Cvd_data['total_cases'] + Cvd_data['new_cases']
                           Cvd_data['total_deaths_reported'] = Cvd_data['total_deaths'] + Cvd_data['new_deaths']
                           Cvd_data
+     ![](featureengeneering.jpg)
 *These lines of code are performing calculations to create two new columns 'total_cases_reported and 'total_deaths_reported' by adding the 'total_cases' with 'new_cases', and 'total_deaths' with 'new_deaths' in the DataFrame*
 
 *    Numerical Correlation: Distr = Cvd_data.select_dtypes(['int', 'float']).iloc[:, [0, 1, 3, 4, 9, 22, 23, 30, 31]].corr()
                                     Distr
 *This code calculates the correlation matrix for type 'int' or 'float'.*
 
-![](covid2.jpg)
+![](numericalcorrelation.jpg)
 
-      
+Here are few observations from the matrix:
+- total_cases vs. new_cases: There is a very weak positive correlation (0.062738), indicating that as the total cases increase, there is a slight increase in new cases.
+
+- total_cases vs. total_deaths: There is a strong positive correlation (0.872258), indicating that as the total cases increase, there is a strong tendency for total deaths to also increase.
+
+- new_cases vs. new_deaths: There is a moderate positive correlation (0.181038), indicating that as new cases increase, there is a moderate increase in new deaths.
+
+- reproduction_rate vs. aged_65_older: There is a moderate positive correlation (0.350282), indicating that countries with a higher percentage of aged 65 or older tend to have a slightly higher reproduction rate.
+
+
+* Numerical Distribution:  plt.hist(Cvd_data['total_cases_reported'], color = 'skyblue', bins = (20))
+                           plt.title('Distribution of Total Cases Reported')
+                           plt.figure(figsize = (12, 6))
+                           plt.show
+  *The code plots a histogram of the 'total_cases_reported'.*
+ ![](numericaldistribution1.jpg)
+
+![](numericaldistribution2.jpg)
+
+![](numericaldistribution3.jpg)
+
+## Correlations betwen relevant variables (Numerial Vs Numerical)
+Distr = Cvd_data.select_dtypes(['int', 'float']).iloc[:, [0, 1, 3, 4, 9, 22, 23, 30, 31]].corr()
+sns.heatmap(Distr)
+
+*This code uses Seaborn's heatmap function to visualize the correlation matrix Distr as a heatmap.*
+
+![](numericals.jpg)
+
+## Statement 1
+###Generate relevant KPI's or metrics regarding the dataset: such as
+###Total cases reported
+###Total Deaths
+###Case Fatality Rate (CFR): Percentage of confirmed COVID-19 cases that result in death, and so on
+
+
+![](statement1.jpg)
+
+##Problem Statement 2
+
+![](statement2.jpg)
+
+##Problem Statement 3
+
+![](statement3.jpg)
+
+
+##Problem Statement 4
+
+![](statement4.jpg)
+
+
+## Conclusion and Recommendations
+
+In conclusion, our analysis has provided valuable insights into the trends and patterns of the COVID-19 pandemic, highlighting the following key findings:
+
+- There is a strong positive correlation between total cases and total deaths, indicating the need for effective measures to reduce the number of new cases and total cases to   minimize deaths.
+- The correlation between new cases and new deaths underscores the importance of prompt detection and treatment to reduce the mortality rate associated with COVID-19.
+- Countries with higher percentages of elderly populations face increased risks, emphasizing the need for targeted measures to protect this vulnerable group.
+- The analysis also revealed variations in the reproduction rate of COVID-19 across different continents and years. The reproduction rate, which indicates the average number    of secondary infections caused by an infected individual, showed fluctuations over time and across regions. For example:
+    In 2020, Europe had the highest reproduction rate, followed by Asia and Africa.
+    In 2021, Europe maintained the highest reproduction rate, with Asia and Africa also showing significant rates.
+    In 2022, Europe continued to have a high reproduction rate, but there was a noticeable decrease compared to the previous year.
+
+Based on these findings, I recommend the following actions:
+    
+- Prioritize vaccination efforts to protect vulnerable populations and reduce the overall impact of the pandemic.
+- Implement strict public health measures to reduce the spread of the virus, especially in regions with high transmission rates.
+- Enhance data collection and reporting to improve the accuracy and timeliness of information on COVID-19 cases and deaths.
+- Continue monitoring and analyzing data to identify emerging trends and adapt strategies accordingly.
+
+
+
+
+
+
+
+
+
+
+
+    Total Cases and Total Deaths:
+        There is a strong positive correlation (0.872258) between total cases and total deaths, indicating that as the number of total cases increases, the number of total deaths also tends to increase.
+        Recommendation: Efforts to reduce the number of new cases and total cases should be a priority to minimize the number of deaths. Implementing public health measures and ensuring access to healthcare are crucial in achieving this goal.
+
+    New Cases and New Deaths:
+        There is a moderate positive correlation (0.642368) between new cases and new deaths, indicating that as the number of new cases increases, the number of new deaths also tends to increase.
+        Recommendation: Prompt detection, isolation, and treatment of new cases are essential in reducing the mortality rate associated with COVID-19.
+
+    Population and Age Demographics:
+        There is a moderate positive correlation between the percentage of the population aged 65 or older and 70 or older with total deaths (0.348887 and 0.184908 respectively).
+        Recommendation: Countries with a higher percentage of elderly populations should take extra precautions to protect this vulnerable group, such as prioritizing vaccination and providing adequate healthcare resources.
+
+    Reproduction Rate and Population:
+        There is a negative correlation (-0.172948) between the reproduction rate and the population, indicating that countries with larger populations tend to have lower reproduction rates.
+        Recommendation: This suggests that densely populated areas may benefit from more stringent public health measures to control the spread of the virus.
+
+    Overall Recommendations:
+        Continue to monitor and analyze data to identify trends and patterns that can inform public health policies and interventions.
+        Implement and enforce measures to reduce the spread of the virus, especially in regions with high reproduction rates and significant elderly populations.
+        Prioritize vaccination efforts to protect vulnerable populations and reduce the overall impact of the pandemic.
+
+These recommendations are based on the correlations observed in the provided data and should be considered alongside other factors and expert advice in managing the COVID-19 pandemic.
+For the correlation between 'total_cases_reported' and 'total_deaths_reported', the correlation coefficient is very high (0.872303), indicating a strong positive correlation. This means that as the total number of reported cases increases, the total number of reported deaths also tends to increase proportionally.
+
+Recommendation: This correlation highlights the importance of accurate reporting and data collection to track the progression of the pandemic accurately. It also underscores the need for robust public health measures to reduce the overall number of cases, which would ultimately lead to a reduction in the number of deaths. Efforts should focus on early detection, effective treatment, and prevention strategies to minimize the impact of COVID-19.
+ 
      
  
 
@@ -132,21 +239,4 @@ print(Cvd_data.head(11))
 
 
 
-    Data Source:
-        Add a section that describes the specific data sources you used for your analysis. Include details such as where the data was sourced from, the format of the data (e.g., CSV, Excel), and any preprocessing steps you took to clean the data.
-
-    Data Cleaning and Preprocessing:
-        Consider adding a section that outlines the data cleaning and preprocessing steps you performed on the raw data. This could include handling missing values, removing duplicates, and transforming data types.
-
-    Exploratory Data Analysis (EDA):
-        Expand on your objective related to EDA by describing the specific EDA techniques you used. This could include summary statistics, visualizations, and hypothesis testing.
-
-    Statistical Analysis and Modeling:
-        If applicable, describe any statistical analysis or modeling techniques you used in your analysis. This could include regression analysis, time series analysis, or clustering.
-
-    Results and Insights:
-        Consider adding a section that summarizes the key findings and insights from your analysis. This could include trends you observed, correlations you discovered, or patterns in the data.
-
-    Conclusion:
-        Conclude your write-up with a summary of your findings and any recommendations for future research or action based on your analysis.
-
+   

@@ -54,16 +54,16 @@ Check for correlations between relevant variables (Numerical vs Numerical).
 3.  Data cleaning methods:Preparing my data for anaalysis
   *  Handling Null Values: Cvd_data['continent'].fillna('unknown, inplace = True')
                            Cvd_data['continent'].isnull().sum()
-      _the first line of code is to fill missing values in the 'continent' column with the string 'unknown'. The second line is used to check if there are any remaining null values in the column after filling them with 'unknown'.
+      *the first line of code is to fill missing values in the 'continent' column with the string 'unknown'. The second line is used to check if there are any remaining null values in the column after filling them with 'unknown'.*
   *  Handling Duplicates: There is no duplicate values in the dataset
   *  Handling Incorrect Datatype: Cvd_data['tests_units'].str.contains('\D').sum()
                                   Cvd_data[Cvd_data['tests_units'].str.contains('\D', na = False)]['tests_units']
                                   Cvd_data['tests_units'] = pd.to_numeric(Cvd_data['tests_units'], errors = 'coerce')
                                   Cvd_data['tests_units']
-     #first line of the code is used to count the number of values in the 'tests_units' that contain a 'str' (non-digit) character. the second line  filters the 'str' character. the next line converts the 'tests_units' column to 'int' (numeric) values. and the last line is then used to display the 'tests_units' column after the conversion, showing the updated numeric values or NaN for values that could not be converted.
+     *first line of the code is used to count the number of values in the 'tests_units' that contain a 'str' (non-digit) character. the second line  filters the 'str' character. the next line converts the 'tests_units' column to 'int' (numeric) values. and the last line is then used to display the 'tests_units' column after the conversion, showing the updated numeric values or NaN for values that could not be converted.*
   *   Handling Incorrect Date Entries: Cvd_data['date'] = pd.to_datetime(Cvd_data['date'], format='%d-%m-%Y')
                                        Cvd_data['date']
-      #This code converts the 'date' column to datetime format function.
+      *This code converts the 'date' column to datetime format function.*
   *
 
       

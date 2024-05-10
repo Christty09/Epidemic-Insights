@@ -352,3 +352,10 @@ In conclusion, our analysis has provided valuable insights into the trends and p
 - Enhance data collection and reporting to improve the accuracy and timeliness of information on COVID-19 cases and deaths.
 
 - Continue monitoring and analyzing data to identify emerging trends and adapt strategies accordingly.
+
+
+
+
+
+
+![](thanks.gif)

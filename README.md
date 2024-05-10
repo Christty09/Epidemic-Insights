@@ -2,8 +2,6 @@
 
 
 
-### **Epidemic-Insights**
-
 
 
 

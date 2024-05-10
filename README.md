@@ -20,13 +20,13 @@
 
 
 ## Introduction
-
+---
 
 This is a project that explores the trends and patterns of the COVID-19 pandemic. It analyzes data to understand how the virus has spread over time and in different places. By doing this, we aim to learn more about the pandemic's development, what influences its spread, and how we can manage it better in the future. Join us as we dig into the data to find the stories behind the numbers and to understand this global health crisis better.
 
 
 ## **Objective**
----
+
 
 * Understand the distribution of numerical values and check for correlations between relevant variables.
 
@@ -36,7 +36,7 @@ This is a project that explores the trends and patterns of the COVID-19 pandemic
             
 
 ## **Problem Statement**
----
+
 
 - Generate relevant KPIs or metrics regarding the dataset.
         Key Tasks:
@@ -52,13 +52,13 @@ This is a project that explores the trends and patterns of the COVID-19 pandemic
 
 
 ## **Data Source**
----
+
   
 CSV file
 
 
 ## **Tools and Techniques:**
----
+
 
 
   *  Python: Used for data cleaning, analysis, and visualization.
@@ -72,6 +72,19 @@ CSV file
   *  numpy: Used for numerical computing.
     
   *  Jupyter Notebook: Used as the development environment for the analysis.
+
+## **Visualization**
+
+- Numerical dristribution
+- Correlations between variables (heatmap)
+- KPIs
+- Top 5 Continent
+- Distribution of Covid-19 across country and age
+- Reproduction Rate (R-Value) for continents over time
+  
+
+
+You can interact with the project [here](http://localhost:8888/lab/tree/Final%20Project.ipynb)
 
 
 ## **Data Cleaning and Processing**

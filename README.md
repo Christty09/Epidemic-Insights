@@ -88,7 +88,7 @@ You can interact with the project [here](http://localhost:8888/lab/tree/Final%20
 
 
 ## **Data Cleaning and Processing**
----
+
 
 
 **1.  import a CSV file named 'covid-data.csv' using pd.read_csv() into a DataFrame named Cvd_data.**
@@ -200,7 +200,7 @@ print(Cvd_data.head(11))
 
 
 ## **Exploratory Data Analysis**
----
+
 
 
 *    **Feature Engineering:**
@@ -215,7 +215,7 @@ Cvd_data
 ![](featureengineering.jpg)
 
 
-*These lines of code are performing calculations to create two new columns 'total_cases_reported and 'total_deaths_reported' by adding the 'total_cases' with 'new_cases', and 'total_deaths' with 'new_deaths' in the DataFrame*
+**These lines of code are performing calculations to create two new columns 'total_cases_reported and 'total_deaths_reported' by adding the 'total_cases' with 'new_cases', and 'total_deaths' with 'new_deaths' in the DataFrame**
 
 
 *    **Numerical Correlation:**
@@ -253,16 +253,25 @@ plt.show
  
 **The code plots a histogram of the 'total_cases_reported'.**
 
- 
- ![](numericaldistribution1.jpg)
+
+This plot shows a right skilled distribution
 
 
 
-![](numericaldistribution2.jpg)
+
+
+   ![](numericaldistribution2.jpg)
+
+
+
+
+
 
 
 
 ![](numericaldistribution3.jpg)
+
+
 
 
 
@@ -279,12 +288,9 @@ sns.heatmap(Distr)
 
 
 **## Statement 1**
----
 
 
-![](statement1.jpg)
-
-The provided data gives an overview of the total reported COVID-19 cases and deaths, along with the calculated case fatality rate (CFR) as a percentage. These metrics are crucial for understanding the impact of the pandemic on a global scale.   
+The provided metrics gives an overview of the total reported COVID-19 cases and deaths, along with the calculated case fatality rate (CFR) as a percentage. These metrics are crucial for understanding the impact of the pandemic on a global scale.   
 
 - Total Cases Reported: 108,635,056,744.44
 
@@ -295,8 +301,12 @@ The provided data gives an overview of the total reported COVID-19 cases and dea
 These numbers represent the cumulative count of confirmed COVID-19 cases and deaths reported worldwide. They reflect the magnitude of the pandemic's spread and its toll on human lives. The case fatality rate is the percentage of confirmed COVID-19 cases that result in death. A CFR of 1.52% indicates on average, about 1.52% of people diagnosed with COVID-19 have died from the disease.
 
 
+![](kpis.jpg)
+
+
 ## **Problem Statement 2**
----
+
+The chart gives insight of the total COVID-19 cases in each country for the specified years. The data indicates how the total number of cases varies across different countries over time.
 
 
 
@@ -305,27 +315,28 @@ These numbers represent the cumulative count of confirmed COVID-19 cases and dea
 
 
 ## **Problem Statement 3**
----
+
+The line plot below revealed variations in the reproduction rate of COVID-19 across different continents and years. The reproduction rate, which indicates the average number  of secondary infections caused by an infected individual, showed fluctuations over time and across regions.
 
 
 
 ![](statement3.jpg)
 
-
-**Insights from the Analysis:**
+**Insight:**
 
 2020: Europe had the highest reproduction rate (13477.41), followed by Africa (11262.41) and Asia (10426.78).
 2021: Europe maintained the highest reproduction rate (16228.19), followed by Asia (13358.17) and Africa (15966.37).
 2022: Europe continued to lead with a reproduction rate of 10770.09, followed by Asia (8688.47) and Africa (7343.79).
 
-**Trend Analysis:**
+**Trend:**
         
 Europe consistently had the highest reproduction rate across all three years, indicating a persistent challenge in controlling the spread of COVID-19 in the region.
 Asia and Africa also experienced high reproduction rates, suggesting ongoing transmission and the need for continued public health interventions.
 
 
 ## **Problem Statement 4**
----
+
+The data indicates how the total number of cases varies across different countries over time.
 
 
 ![](statement4.jpg)
@@ -334,7 +345,7 @@ Asia and Africa also experienced high reproduction rates, suggesting ongoing tra
 
 
 ## **Conclusion and Recommendations**
----
+
 
 
 In conclusion, our analysis has provided valuable insights into the trends and patterns of the COVID-19 pandemic, highlighting the following key findings:

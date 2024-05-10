@@ -1,26 +1,33 @@
-![]()
+(covid1.jpg)
 
 
 
-**# Epidemic-Insights**
-**## Epidemic Insights: Uncovering COVID-19 Trends**
+### **Epidemic-Insights**
 
 
 
-:-------![](covid2.jpg)--------------------:|:--------------------------![](covid1.jpg)-----------------------------:
+
+## **Epidemic Insights: Uncovering COVID-19 Trends**
+
+
+
+
+
+
+
+(covid2.jpg) 
 
 
 
 
 
 ## Introduction
----
 
 
 This is a project that explores the trends and patterns of the COVID-19 pandemic. It analyzes data to understand how the virus has spread over time and in different places. By doing this, we aim to learn more about the pandemic's development, what influences its spread, and how we can manage it better in the future. Join us as we dig into the data to find the stories behind the numbers and to understand this global health crisis better.
 
 
-**## Objective**
+## **Objective**
 ---
 
 * Understand the distribution of numerical values and check for correlations between relevant variables.
@@ -30,7 +37,8 @@ This is a project that explores the trends and patterns of the COVID-19 pandemic
 * Check for correlations between relevant variables (Numerical vs Numerical).
             
 
-**## Problem Statement**
+## **Problem Statement**
+---
 
 - Generate relevant KPIs or metrics regarding the dataset.
         Key Tasks:
@@ -45,13 +53,13 @@ This is a project that explores the trends and patterns of the COVID-19 pandemic
 - Analyze the distribution of COVID-19 cases and deaths among different age groups, and how it varies across countries.
 
 
-**## Data Source**
+## **Data Source**
 ---
   
-   CSV file
+CSV file
 
 
-**## Tools and Techniques:**
+## **Tools and Techniques:**
 ---
 
 
@@ -68,7 +76,7 @@ This is a project that explores the trends and patterns of the COVID-19 pandemic
   *  Jupyter Notebook: Used as the development environment for the analysis.
 
 
-**## Data Cleaning and Processing**
+## **Data Cleaning and Processing**
 ---
 
 
@@ -180,7 +188,7 @@ print(Cvd_data.head(11))
 **This calculates the mean, interquartile range (IQR), and lower and upper bounds for outliers for the columns "''total_cases', 'total_deaths', 'new_deaths'". And then defines a function to replace outliers with the mean value for each column and applies this function to replace outliers in the specified columns. Finally, it displays the first 11 rows of the data after replacing outliers.**
 
 
-**## Exploratory Data Analysis**
+## **Exploratory Data Analysis**
 ---
 
 
@@ -276,7 +284,7 @@ The provided data gives an overview of the total reported COVID-19 cases and dea
 These numbers represent the cumulative count of confirmed COVID-19 cases and deaths reported worldwide. They reflect the magnitude of the pandemic's spread and its toll on human lives. The case fatality rate is the percentage of confirmed COVID-19 cases that result in death. A CFR of 1.52% indicates on average, about 1.52% of people diagnosed with COVID-19 have died from the disease.
 
 
-**## Problem Statement 2**
+## **Problem Statement 2**
 ---
 
 
@@ -285,7 +293,7 @@ These numbers represent the cumulative count of confirmed COVID-19 cases and dea
 
 
 
-**## Problem Statement 3**
+## **Problem Statement 3**
 ---
 
 
@@ -305,7 +313,7 @@ Europe consistently had the highest reproduction rate across all three years, in
 Asia and Africa also experienced high reproduction rates, suggesting ongoing transmission and the need for continued public health interventions.
 
 
-**## Problem Statement 4**
+## **Problem Statement 4**
 ---
 
 
@@ -314,7 +322,7 @@ Asia and Africa also experienced high reproduction rates, suggesting ongoing tra
 
 
 
-**## Conclusion and Recommendations**
+## **Conclusion and Recommendations**
 ---
 
 
